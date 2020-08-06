@@ -1,4 +1,4 @@
-# Showing how do a API Request from front-end
+# How do a front-end request to API Node
 
 You can visualize the response (front-end) form: <a href='https://pablorodrigo52.github.io/node-api/'>GH-PAGES</a>
 The server was uploaded on <a href='https://pablorodrigo52-api-node.herokuapp.com'>HEROKU</a>
