@@ -10,3 +10,4 @@ app.get('/', (request, response)=>{
     })
 })
 app.listen('1234')
+console.log('Listen on port: 1234');
