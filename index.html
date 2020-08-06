@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making a request to an API</title>
+</head>
+<body>
+    <h1> Hello </h1>
+    <h2> We make a request to an api and the response is: </h2>
+    <section id='htmlstring'></section>
+</body>
+<script>
+    let section = document.querySelector('#htmlstring');
+    fetch('http://localhost:8089') // make a call to address....
+    .then(async response =>{ // when the call is done do....
+        const json = await response.json();
+        console.log(response.body);
+        section.innerHTML = `
+        <ul>
+            <li> URL: ${response.url}</li>
+            <li> Status: ${(response.status == 200) ? response.status+' OK' : response.status} </li>
+            <li> Type: ${response.type} </li>
+        </ul>
+        `;
+        section.insertAdjacentHTML('beforeend', JSON.stringify(json));
+    })
+    .catch(error =>console.log(error)); //if have some error do....
+</script>
+</html>
